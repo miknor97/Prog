@@ -1,0 +1,20 @@
+import random
+
+
+n = random.randint(1, 100)
+print("Datorn tänker på ett tal mellan 1 och 100. Gissa vilket!")
+count = 0
+
+while True:
+    gissning = int(input("Gissa:"))
+    gissning_as_int = int(gissning)
+    count += 1
+    if gissning_as_int == n:
+        print("Rätt! Du gissade rätt på " + str(count) + " gissningar!")
+        break
+
+    if gissning_as_int < n:
+        print("Fel, ditt tal är lägre än mitt nummer... försök igen!")
+
+    if gissning_as_int > n:
+        print ("Fel, ditt tal är större än mitt tal, försök igen!")
